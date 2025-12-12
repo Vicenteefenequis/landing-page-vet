@@ -28,3 +28,4 @@ jobs:
           password: ${{ secrets.HOSTINGER_FTP_PASS }}
           local-dir: dist/
           server-dir: public_html/
+          dangerous-clean-slate: true
