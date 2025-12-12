@@ -1,0 +1,30 @@
+name: 🚀 Build + Deploy to Hostinger
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: 📦 Check out
+        uses: actions/checkout@v6
+
+      - name: 🛠️ Build static
+        run: |
+          npm install
+          npm run build
+        env:
+          CI: true
+
+      # publica via FTP
+      - name: 🚚 FTP Deploy to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.HOSTINGER_FTP_HOST }}
+          username: ${{ secrets.HOSTINGER_FTP_USER }}
+          password: ${{ secrets.HOSTINGER_FTP_PASS }}
+          local-dir: ./dist
+          server-dir: /home/u998393833/domains/vetisadoranascimento.com.br/public_html
