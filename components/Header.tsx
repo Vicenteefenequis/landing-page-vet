@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Stethoscope } from 'lucide-react';
-import { DOCTOR_NAME, NAV_LINKS, WHATSAPP_LINK } from '../constants';
+import { CRMV, DOCTOR_NAME, NAV_LINKS, WHATSAPP_LINK } from '../constants';
 import { Button } from './Button';
 
 export const Header: React.FC = () => {
@@ -29,9 +29,14 @@ export const Header: React.FC = () => {
             <div className={`p-2 rounded-lg transition-colors ${isScrolled ? 'bg-primary-50 text-primary-800' : 'bg-white/10 text-primary-900 backdrop-blur-sm'}`}>
               <Stethoscope size={24} />
             </div>
-            <span className={`font-serif font-bold text-lg md:text-xl tracking-tight ${isScrolled ? 'text-slate-900' : 'text-slate-900'}`}>
-              {DOCTOR_NAME}
-            </span>
+            <div className="flex flex-col leading-tight">
+              <span className={`font-serif font-bold text-lg md:text-xl tracking-tight ${isScrolled ? 'text-slate-900' : 'text-slate-900'}`}>
+                {DOCTOR_NAME}
+              </span>
+              <span className={`text-[11px] font-semibold uppercase tracking-[0.08em] ${isScrolled ? 'text-slate-600' : 'text-slate-800/80'}`}>
+                {CRMV}
+              </span>
+            </div>
           </a>
 
           {/* Desktop Nav */}
