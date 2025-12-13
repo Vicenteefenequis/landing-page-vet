@@ -10,12 +10,12 @@ export const About: React.FC = () => {
           <div className="w-full lg:w-1/2 relative order-2 lg:order-1">
              <div className="grid grid-cols-2 gap-4">
                 <img 
-                  src="../assets/feline.png" 
+                  src="https://i.imgur.com/rHUKTy8.png" 
                   alt="Felino atendido pela veterinária" 
                   className="rounded-2xl shadow-lg w-full h-64 object-cover mt-8" 
                 />
                 <img 
-                  src="../assets/jabuti.png" 
+                  src="https://i.imgur.com/YE4lkcS.jpeg" 
                   alt="Jabuti atendido pela veterinária" 
                   className="rounded-2xl shadow-lg w-full h-64 object-cover" 
                 />
