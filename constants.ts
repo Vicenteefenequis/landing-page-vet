@@ -1,7 +1,7 @@
 import { ServiceItem, QualificationItem,  NavLink } from './types';
 
 export const DOCTOR_NAME = "Dra. Isadora Nascimento";
-export const CRMV = "CRMV 826223";
+export const CRMV = "CRMV-ES 04663";
 export const ROLE = "Médica Veterinária & Mestre em Ciência Animal";
 export const REGIONS = ["Marechal Floriano", "Domingos Martins", "Santa Isabel", "Viana", "Cariacica", "Vitória", "Vila Velha"];
 export const WHATSAPP_NUMBER = "5562999980268"; // Atualizado para o número solicitado (DDD 62)
