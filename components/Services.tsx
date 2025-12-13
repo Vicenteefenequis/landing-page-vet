@@ -9,10 +9,10 @@ export const Services: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-sm font-bold tracking-widest text-primary-700 uppercase mb-3">Áreas de Atuação</h2>
           <h3 className="font-serif text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 leading-tight">
-            Soluções completas para sua instituição
+            Soluções completas para você
           </h3>
           <p className="text-slate-600 text-lg font-medium">
-            Atendimento personalizado para atender as demandas específicas de cada cliente, desde o manejo de fauna silvestre até a gestão clínica de pequenos animais.
+            Atendimento personalizado para atender as demandas específicas de cada cliente, desde o manejo de fauna silvestre até a clínica.
           </p>
         </div>
 

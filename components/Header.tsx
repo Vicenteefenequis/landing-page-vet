@@ -52,7 +52,7 @@ export const Header: React.FC = () => {
               variant="primary" 
               className="!py-2 !px-4 !text-sm"
             >
-              Agendar Consultoria
+              Agende um horário
             </Button>
           </nav>
 

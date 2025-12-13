@@ -21,10 +21,10 @@ export const Contact: React.FC = () => {
             <div>
               <h2 className="text-sm font-bold tracking-widest text-primary-400 uppercase mb-3">Vamos Conversar?</h2>
               <h3 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-white leading-tight">
-                Pronta para elevar o nível da sua instituição?
+                Pronto para elevar o cuidado com seus animais?
               </h3>
               <p className="text-slate-300 mb-8 text-lg font-medium">
-                Entre em contato para agendar uma consultoria, solicitar uma proposta ou tirar dúvidas sobre os serviços oferecidos. Estou à disposição para atender em toda a região.
+                Entre em contato para discutir como posso ajudar a transformar o cuidado com a saúde animal.
               </p>
               
               <div className="space-y-6">
@@ -59,8 +59,8 @@ export const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-white mb-1">Email Profissional</h4>
-                    <a href="mailto:contato@isadoranascimento.vet" className="text-slate-300 hover:text-white transition-colors font-medium">
-                      contato@isadoranascimento.vet
+                    <a href="mailto:isadoraa.lima@gmail.com" className="text-slate-300 hover:text-white transition-colors font-medium">
+                      isadoraa.lima@gmail.com
                     </a>
                   </div>
                 </div>

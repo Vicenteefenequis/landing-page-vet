@@ -10,13 +10,13 @@ export const About: React.FC = () => {
           <div className="w-full lg:w-1/2 relative order-2 lg:order-1">
              <div className="grid grid-cols-2 gap-4">
                 <img 
-                  src="https://picsum.photos/id/1062/400/500" 
-                  alt="Trabalho de campo" 
+                  src="../assets/feline.png" 
+                  alt="Felino atendido pela veterinária" 
                   className="rounded-2xl shadow-lg w-full h-64 object-cover mt-8" 
                 />
                 <img 
-                  src="https://picsum.photos/id/1074/400/500" 
-                  alt="Consultoria em zoológico" 
+                  src="../assets/jabuti.png" 
+                  alt="Jabuti atendido pela veterinária" 
                   className="rounded-2xl shadow-lg w-full h-64 object-cover" 
                 />
              </div>
@@ -27,15 +27,15 @@ export const About: React.FC = () => {
           <div className="w-full lg:w-1/2 order-1 lg:order-2">
             <h2 className="text-sm font-bold tracking-widest text-primary-700 uppercase mb-3">Sobre Mim</h2>
             <h3 className="font-serif text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">
-              Uma abordagem técnica e humana para a medicina veterinária
+              Cuidado especializado para quem cuida do diferente.
             </h3>
             
             <div className="space-y-4 text-slate-700 font-medium leading-relaxed mb-8 text-lg">
               <p>
-                Sou a Dra. Isadora Nascimento, médica veterinária apaixonada pela interseção entre saúde animal, conservação e gestão eficiente. Com anos de atuação no mercado, dedico minha carreira a elevar o padrão de cuidados em instituições que lidam com a vida animal.
+                Sou Isadora Nascimento, médica veterinária apaixonada pela interseção entre saúde animal e conservação. Com anos de atuação no mercado, dedico minha carreira a elevar o padrão de cuidados aos animais.
               </p>
               <p>
-                Minha metodologia de trabalho une rigor científico com uma visão prática de gestão. Entendo que zoológicos e clínicas não precisam apenas de diagnósticos precisos, mas de processos que garantam a sustentabilidade do negócio e o bem-estar contínuo dos animais sob seus cuidados.
+                Minha metodologia de trabalho une rigor científico com uma visão prática de clínica e medicina preventiva. Entendo que zoológicos e clínicas não precisam apenas de diagnósticos precisos, mas de processos que garantam o bem-estar contínuo dos animais sob seus cuidados.
               </p>
             </div>
 

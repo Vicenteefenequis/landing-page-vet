@@ -9,14 +9,13 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
           <div className="text-center md:text-left">
             <h5 className="font-serif text-xl font-bold text-slate-900">{DOCTOR_NAME}</h5>
-            <p className="text-slate-500 text-sm mt-2">Consultoria Veterinária & Gestão de Fauna</p>
+            <p className="text-slate-500 text-sm mt-2">
+              Cuidado especializado para quem cuida do diferente.
+            </p>
           </div>
           
           <div className="flex items-center gap-6">
-            <a href="#" className="p-2 rounded-full bg-slate-50 text-slate-600 hover:bg-primary-50 hover:text-primary-700 transition-colors" aria-label="LinkedIn">
-              <Linkedin size={20} />
-            </a>
-            <a href="#" className="p-2 rounded-full bg-slate-50 text-slate-600 hover:bg-primary-50 hover:text-primary-700 transition-colors" aria-label="Instagram">
+            <a href="https://www.instagram.com/vet_isadora.nascimento" className="p-2 rounded-full bg-slate-50 text-slate-600 hover:bg-primary-50 hover:text-primary-700 transition-colors" aria-label="Instagram">
               <Instagram size={20} />
             </a>
           </div>

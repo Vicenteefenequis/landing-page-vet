@@ -9,7 +9,7 @@ export const Qualifications: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-16">
           
           <div className="lg:w-1/3">
-            <h2 className="text-sm font-bold tracking-widest text-primary-700 uppercase mb-3">Trajetória Acadêmica</h2>
+            <h2 className="text-sm font-bold tracking-widest text-primary-700 uppercase mb-3">Trajetória</h2>
             <h3 className="font-serif text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">
               Formação sólida e contínua
             </h3>
