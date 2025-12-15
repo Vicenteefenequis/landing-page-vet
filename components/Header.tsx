@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Stethoscope } from 'lucide-react';
-import { CRMV, DOCTOR_NAME, NAV_LINKS, WHATSAPP_LINK } from '../constants';
+'use client';
+
+import React, { useEffect, useState } from 'react';
+import { Menu, Stethoscope, X } from 'lucide-react';
+import Link from 'next/link';
+import { CRMV, DOCTOR_NAME, NAV_LINKS, WHATSAPP_LINK } from '@/constants';
 import { Button } from './Button';
 
 export const Header: React.FC = () => {
@@ -25,7 +28,7 @@ export const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between">
-          <a href="#" className="flex items-center gap-2 group">
+          <Link href="#inicio" className="flex items-center gap-2 group" prefetch={false}>
             <div className={`p-2 rounded-lg transition-colors ${isScrolled ? 'bg-primary-50 text-primary-800' : 'bg-white/10 text-primary-900 backdrop-blur-sm'}`}>
               <Stethoscope size={24} />
             </div>
@@ -37,18 +40,19 @@ export const Header: React.FC = () => {
                 {CRMV}
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
-              <a 
+              <Link
                 key={link.label}
                 href={link.href}
                 className="text-sm font-medium text-slate-600 hover:text-primary-800 transition-colors"
+                prefetch={false}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <Button 
               asLink 
@@ -76,14 +80,15 @@ export const Header: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-100 shadow-lg py-4 px-4 flex flex-col gap-4">
           {NAV_LINKS.map((link) => (
-            <a 
+            <Link
               key={link.label}
               href={link.href}
               className="text-base font-medium text-slate-700 py-2 border-b border-gray-50 hover:text-primary-800"
               onClick={() => setIsMenuOpen(false)}
+              prefetch={false}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
           <Button 
             asLink 

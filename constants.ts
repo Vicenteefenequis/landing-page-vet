@@ -1,11 +1,27 @@
-import { ServiceItem, QualificationItem,  NavLink } from './types';
+import { NavLink, QualificationItem, ServiceItem } from './types';
 
 export const DOCTOR_NAME = "Dra. Isadora Nascimento";
-export const CRMV = "CRMV-ES 04663";
+export const CRMV = "CRMV 826223";
 export const ROLE = "Médica Veterinária & Mestre em Ciência Animal";
 export const REGIONS = ["Marechal Floriano", "Domingos Martins", "Santa Isabel", "Viana", "Cariacica", "Vitória", "Vila Velha"];
 export const WHATSAPP_NUMBER = "5562999980268"; // Atualizado para o número solicitado (DDD 62)
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços.`;
+
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://vetisadoranascimento.com.br/';
+export const SEO_DESCRIPTION = "Medicina veterinária especializada em pets não convencionais: répteis, aves, pequenos mamíferos e animais exóticos. Atendimento em Marechal Floriano, Domingos Martins, Santa Isabel, Cariacica, Viana, Vitória e Vila Velha.";
+export const SEO_KEYWORDS = [
+  "Veterinária",
+  "Pets Não Convencionais",
+  "Animais Exóticos",
+  "Marechal Floriano",
+  "Domingos Martins",
+  "Santa Isabel",
+  "Cariacica",
+  "Viana",
+  "Vitória",
+  "Vila Velha",
+  "Isadora Nascimento",
+];
 
 export const NAV_LINKS: NavLink[] = [
   { label: 'Sobre Mim', href: '#sobre' },

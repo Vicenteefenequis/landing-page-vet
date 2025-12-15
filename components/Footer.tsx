@@ -1,6 +1,6 @@
 import React from 'react';
-import { DOCTOR_NAME } from '../constants';
-import { Linkedin, Instagram } from 'lucide-react';
+import { DOCTOR_NAME } from '@/constants';
+import { Instagram } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
