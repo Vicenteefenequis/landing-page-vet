@@ -19,7 +19,7 @@ export const Qualifications: React.FC = () => {
             <div className="p-6 bg-primary-50 rounded-2xl border border-primary-100">
               <GraduationCap className="w-10 h-10 text-primary-700 mb-4" />
               <p className="font-semibold text-primary-900 italic text-lg">
-                "A educação é a base para transformar a realidade da saúde animal no Brasil."
+               A educação é a base para transformar a realidade da saúde animal no Brasil.
               </p>
             </div>
           </div>

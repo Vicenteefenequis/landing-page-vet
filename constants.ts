@@ -7,7 +7,7 @@ export const REGIONS = ["Marechal Floriano", "Domingos Martins", "Santa Isabel",
 export const WHATSAPP_NUMBER = "5562999980268"; // Atualizado para o número solicitado (DDD 62)
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços.`;
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://dra-isadora.example.com';
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://vetisadoranascimento.com.br/';
 export const SEO_DESCRIPTION = "Medicina veterinária especializada em pets não convencionais: répteis, aves, pequenos mamíferos e animais exóticos. Atendimento em Marechal Floriano, Domingos Martins, Santa Isabel, Cariacica, Viana, Vitória e Vila Velha.";
 export const SEO_KEYWORDS = [
   "Veterinária",
