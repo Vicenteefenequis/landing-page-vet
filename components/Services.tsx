@@ -1,5 +1,5 @@
 import React from 'react';
-import { SERVICES } from '../constants';
+import { SERVICES } from '@/constants';
 import * as Icons from 'lucide-react';
 
 export const Services: React.FC = () => {

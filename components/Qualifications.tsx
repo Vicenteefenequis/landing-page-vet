@@ -1,5 +1,5 @@
 import React from 'react';
-import { QUALIFICATIONS } from '../constants';
+import { QUALIFICATIONS } from '@/constants';
 import { GraduationCap } from 'lucide-react';
 
 export const Qualifications: React.FC = () => {

@@ -1,20 +1,38 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Landing page - Dra. Isadora Nascimento
 
-# Run and deploy your AI Studio app
+Landing page estática para destacar a atuação veterinária da Dra. Isadora Nascimento. O projeto foi migrado para Next.js (App Router) com geração estática (SSG), otimização de fontes/imagens e configuração de SEO completa.
 
-This contains everything you need to run your app locally.
+## Requisitos
 
-View your app in AI Studio: https://ai.studio/apps/drive/1LsGOMJvNU3PJn3B9KrL-cR_pmBKqKZww
+- Node.js 20+
+- npm (ou outro gerenciador compatível)
 
-## Run Locally
+## Desenvolvimento
 
-**Prerequisites:**  Node.js
+```bash
+npm install
+npm run dev
+```
+Acesse http://localhost:3000.
 
+## Build e exportação estática
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+npm run build
+```
+O build gera a pasta `out/` pronta para deploy estático (FTP/CDN). Para pré-visualizar o resultado exportado:
+
+```bash
+npx serve out
+```
+
+## SEO e arquivos gerados
+
+- `app/layout.tsx` define metadata (título, descrição, canonical, Open Graph e Twitter).
+- `app/sitemap.ts` e `app/robots.ts` geram `sitemap.xml` e `robots.txt` durante o build.
+- Imagens locais usam `next/image` com otimização estática (`images.unoptimized` no `next.config.mjs`).
+- Defina `NEXT_PUBLIC_SITE_URL` para usar seu domínio real nas tags e arquivos gerados.
+
+## Deploy (GitHub Actions)
+
+O workflow em `.github/workflows/deploy.yml` instala dependências, roda o build e publica o conteúdo de `out/` via FTP.

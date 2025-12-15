@@ -1,7 +1,9 @@
+'use client';
+
 import React from 'react';
-import { Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
+import { ExternalLink, Mail, MapPin, Phone } from 'lucide-react';
 import { Button } from './Button';
-import { WHATSAPP_LINK, REGIONS } from '../constants';
+import { REGIONS, WHATSAPP_LINK } from '@/constants';
 
 export const Contact: React.FC = () => {
   // Helper to format list with "e"

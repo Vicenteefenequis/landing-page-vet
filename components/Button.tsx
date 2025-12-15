@@ -1,3 +1,6 @@
+'use client';
+
+import Link from 'next/link';
 import React from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -8,43 +11,48 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   external?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({ 
-  children, 
-  variant = 'primary', 
-  fullWidth = false, 
-  className = '', 
+export const Button: React.FC<ButtonProps> = ({
+  children,
+  variant = 'primary',
+  fullWidth = false,
+  className = '',
   asLink = false,
   href,
   external,
-  ...props 
+  type = 'button',
+  ...props
 }) => {
-  const baseStyles = "inline-flex items-center justify-center px-6 py-3 rounded-full font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed text-sm md:text-base";
-  
-  const variants = {
-    primary: "bg-primary-800 text-white hover:bg-primary-900 focus:ring-primary-500 shadow-lg hover:shadow-xl",
-    secondary: "bg-white text-primary-900 hover:bg-gray-50 focus:ring-gray-200 border border-gray-200 shadow-sm",
-    outline: "border-2 border-primary-800 text-primary-800 hover:bg-primary-50 focus:ring-primary-500",
-  };
+  const baseStyles = 'inline-flex items-center justify-center px-6 py-3 rounded-full font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed text-sm md:text-base';
 
-  const widthStyles = fullWidth ? "w-full" : "";
+  const variants = {
+    primary: 'bg-primary-800 text-white hover:bg-primary-900 focus:ring-primary-500 shadow-lg hover:shadow-xl',
+    secondary: 'bg-white text-primary-900 hover:bg-gray-50 focus:ring-gray-200 border border-gray-200 shadow-sm',
+    outline: 'border-2 border-primary-800 text-primary-800 hover:bg-primary-50 focus:ring-primary-500',
+  } as const;
+
+  const widthStyles = fullWidth ? 'w-full' : '';
 
   const classes = `${baseStyles} ${variants[variant]} ${widthStyles} ${className}`;
 
   if (asLink && href) {
+    const isExternal = external ?? href.startsWith('http');
+    if (isExternal) {
+      return (
+        <a href={href} className={classes} target="_blank" rel="noopener noreferrer">
+          {children}
+        </a>
+      );
+    }
+
     return (
-      <a 
-        href={href} 
-        className={classes}
-        target={external ? "_blank" : undefined}
-        rel={external ? "noopener noreferrer" : undefined}
-      >
+      <Link href={href} className={classes} prefetch={false}>
         {children}
-      </a>
+      </Link>
     );
   }
 
   return (
-    <button className={classes} {...props}>
+    <button type={type} className={classes} {...props}>
       {children}
     </button>
   );

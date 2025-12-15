@@ -1,7 +1,9 @@
 import React from 'react';
+import Image from 'next/image';
 import { ArrowRight, MapPin } from 'lucide-react';
-import { ROLE, REGIONS, WHATSAPP_LINK } from '../constants';
+import { ROLE, REGIONS, WHATSAPP_LINK } from '@/constants';
 import { Button } from './Button';
+import araraImage from '@/public/images/arara.jpeg';
 
 export const Hero: React.FC = () => {
   // Helper to format list with "e"
@@ -53,10 +55,13 @@ export const Hero: React.FC = () => {
           <div className="flex-1 w-full max-w-lg lg:max-w-xl relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] bg-slate-200 group">
               {/* Using a high-quality placeholder that looks like a professional veterinarian/consultant context */}
-              <img 
-                src={'../assets/arara.jpeg'}
-                alt="Dra. Isadora Nascimento em campo" 
+              <Image
+                src={araraImage}
+                alt="Dra. Isadora Nascimento em campo"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                fill
+                priority
+                sizes="(min-width: 1024px) 480px, 90vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
               

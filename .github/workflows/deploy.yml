@@ -17,12 +17,14 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: 🛠️ Build
+      - name: 📥 Install dependencies
+        run: npm install
+
+      - name: 🛠️ Build static export
         run: |
-          npm ci
           npm run build
-          echo "build-$(date -u +%Y%m%d-%H%M%S)" > dist/build.txt
-          test -f dist/index.html
+          echo "build-$(date -u +%Y%m%d-%H%M%S)" > out/build.txt
+          test -f out/index.html
 
       - name: 🚚 FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
@@ -30,6 +32,6 @@ jobs:
           server: ${{ secrets.HOSTINGER_FTP_HOST }}
           username: ${{ secrets.HOSTINGER_FTP_USER }}
           password: ${{ secrets.HOSTINGER_FTP_PASS }}
-          local-dir: dist/
+          local-dir: out/
           server-dir: ./
           dangerous-clean-slate: true
