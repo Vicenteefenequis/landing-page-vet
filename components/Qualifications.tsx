@@ -9,12 +9,12 @@ export const Qualifications: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-16">
           
           <div className="lg:w-1/3">
-            <h2 className="text-sm font-bold tracking-widest text-primary-700 uppercase mb-3">Trajetória</h2>
-            <h3 className="font-serif text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">
+            <p className="text-sm font-bold tracking-widest text-primary-700 uppercase mb-3">Trajetória</p>
+            <h2 className="font-serif text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">
               Formação sólida e contínua
-            </h3>
+            </h2>
             <p className="text-slate-600 mb-8 font-medium text-lg">
-              Acredito que a excelência profissional se constrói através do estudo contínuo e da busca incessante pelo conhecimento atualizado.
+              Formação acadêmica e prática com fauna silvestre e exótica, em zoológico, pesquisa e atendimento a animais resgatados.
             </p>
             <div className="p-6 bg-primary-50 rounded-2xl border border-primary-100">
               <GraduationCap className="w-10 h-10 text-primary-700 mb-4" />
@@ -37,7 +37,7 @@ export const Qualifications: React.FC = () => {
                   {/* Content Card */}
                   <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="font-bold text-slate-900 text-lg">{qual.title}</span>
+                      <h3 className="font-bold text-slate-900 text-lg">{qual.title}</h3>
                       <span className="text-xs font-bold text-primary-700 bg-primary-50 px-2 py-1 rounded-full">{qual.year}</span>
                     </div>
                     <div className="text-sm font-bold text-slate-500 mb-2 uppercase tracking-wide">{qual.institution}</div>

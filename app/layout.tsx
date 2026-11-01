@@ -2,22 +2,22 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
-import { CRMV, DOCTOR_NAME, SEO_DESCRIPTION, SEO_KEYWORDS, SITE_URL } from '@/constants';
+import { DOCTOR_NAME, SEO_DESCRIPTION, SEO_TITLE, SITE_URL } from '@/constants';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' });
 const playfair = Playfair_Display({ subsets: ['latin'], display: 'swap', variable: '--font-playfair' });
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = 'Dra. Isadora Nascimento | Medicina Veterinária Especializada em Pets Não Convencionais';
+  const title = SEO_TITLE;
   const description = SEO_DESCRIPTION;
   const baseUrl = SITE_URL.endsWith('/') ? SITE_URL.slice(0, -1) : SITE_URL;
-  const imagePath = '/images/arara.jpeg';
+  const imagePath = '/images/og.jpg';
+  const imageAlt = `${DOCTOR_NAME} examinando uma arara-azul`;
 
   return {
     metadataBase: new URL(baseUrl),
     title,
     description,
-    keywords: SEO_KEYWORDS,
     alternates: {
       canonical: '/',
     },
@@ -36,7 +36,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: imagePath,
           width: 1200,
           height: 630,
-          alt: `${DOCTOR_NAME} - ${CRMV}`,
+          alt: imageAlt,
         },
       ],
     },
@@ -45,7 +45,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title,
       description,
       creator: DOCTOR_NAME,
-      images: [imagePath],
+      images: [{ url: imagePath, alt: imageAlt }],
     },
     category: 'veterinary',
   };
