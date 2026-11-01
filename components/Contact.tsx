@@ -3,7 +3,8 @@
 import React, { useState } from 'react';
 import { ExternalLink, Mail, MapPin, Phone } from 'lucide-react';
 import { Button } from './Button';
-import { BUSINESS_HOURS_LABEL, REGIONS, SPECIES_GROUPS, WHATSAPP_LINK, WHATSAPP_NUMBER } from '@/constants';
+import { BUSINESS_HOURS_LABEL, CONTACT_EMAIL, PHONE_DISPLAY, PHONE_LINK, REGIONS, SPECIES_GROUPS, WHATSAPP_LINK, WHATSAPP_NUMBER } from '@/constants';
+import { trackConversion } from '@/lib/gtag';
 import { buildWhatsappUrl } from '@/lib/whatsapp';
 
 type RequiredField = 'nome' | 'especie' | 'cidade';
@@ -49,6 +50,7 @@ export const Contact: React.FC = () => {
     }
 
     const url = buildWhatsappUrl(WHATSAPP_NUMBER, values);
+    trackConversion('whatsapp');
     const opened = window.open(url, '_blank');
     if (opened) {
       opened.opener = null;
@@ -103,6 +105,9 @@ export const Contact: React.FC = () => {
                     <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:text-white transition-colors inline-flex items-center gap-1 font-bold">
                       Iniciar conversa <ExternalLink size={14} />
                     </a>
+                    <a href={PHONE_LINK} className="block mt-1 text-slate-300 hover:text-white transition-colors font-medium">
+                      Ligar: {PHONE_DISPLAY}
+                    </a>
                   </div>
                 </div>
 
@@ -124,8 +129,8 @@ export const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-white mb-1">E-mail</h3>
-                    <a href="mailto:isadoraa.lima@gmail.com" className="text-slate-300 hover:text-white transition-colors font-medium">
-                      isadoraa.lima@gmail.com
+                    <a href={`mailto:${CONTACT_EMAIL}`} className="text-slate-300 hover:text-white transition-colors font-medium">
+                      {CONTACT_EMAIL}
                     </a>
                   </div>
                 </div>

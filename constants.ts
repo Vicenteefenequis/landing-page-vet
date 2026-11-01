@@ -7,9 +7,19 @@ export const REGIONS = ["Marechal Floriano", "Domingos Martins", "Santa Isabel",
 export const WHATSAPP_NUMBER = "5562999980268"; // Atualizado para o número solicitado (DDD 62)
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Olá, Dra. Isadora! Gostaria de agendar uma consulta a domicílio.')}`;
 export const INSTAGRAM_URL = "https://www.instagram.com/vet_isadora.nascimento";
+export const CONTACT_EMAIL = "isadoraa.lima@gmail.com";
 export const BUSINESS_HOURS_LABEL = "Segunda a Sexta, 08h às 18h";
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://vetisadoranascimento.com.br/';
+export const PHONE_DISPLAY = `(${WHATSAPP_NUMBER.slice(2, 4)}) ${WHATSAPP_NUMBER.slice(4, 9)}-${WHATSAPP_NUMBER.slice(9)}`;
+export const PHONE_LINK = `tel:+${WHATSAPP_NUMBER}`;
+
+// Google Ads: ID da conta ("AW-123456789") e rótulos das ações de conversão.
+// Vazios = tag desativada. Definidos no build (variáveis do repositório no GitHub).
+export const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID ?? '';
+export const GOOGLE_ADS_WHATSAPP_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_WHATSAPP_LABEL ?? '';
+export const GOOGLE_ADS_CALL_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_CALL_LABEL ?? '';
+
+export const SITE_URL =process.env.NEXT_PUBLIC_SITE_URL ?? 'https://vetisadoranascimento.com.br/';
 export const SEO_TITLE = "Veterinária de Silvestres e Exóticos a Domicílio | Dra. Isadora";
 export const SEO_DESCRIPTION = "Veterinária de silvestres e exóticos a domicílio: aves, répteis e pequenos mamíferos. Também cães e gatos. Vitória, Vila Velha, Cariacica e região.";
 

@@ -2,6 +2,8 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
+import { CookieBanner } from '@/components/CookieBanner';
+import { GoogleAds } from '@/components/GoogleAds';
 import { DOCTOR_NAME, SEO_DESCRIPTION, SEO_TITLE, SITE_URL } from '@/constants';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' });
@@ -56,6 +58,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pt-BR" className="scroll-smooth">
       <body className={`${inter.variable} ${playfair.variable} min-h-screen bg-slate-50 text-slate-900 font-sans antialiased`}>
         {children}
+        <GoogleAds />
+        <CookieBanner />
       </body>
     </html>
   );

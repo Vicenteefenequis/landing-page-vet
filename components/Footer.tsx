@@ -1,6 +1,9 @@
 import React from 'react';
 import { CRMV, DOCTOR_NAME, INSTAGRAM_URL } from '@/constants';
 import { Instagram } from 'lucide-react';
+import Link from 'next/link';
+import { CookiePreferencesButton } from './CookieBanner';
+import { PRIVACY_PATH } from '@/lib/consent';
 
 export const Footer: React.FC = () => {
   return (
@@ -24,6 +27,12 @@ export const Footer: React.FC = () => {
         
         <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
           <p>&copy; {new Date().getFullYear()} {DOCTOR_NAME}. Todos os direitos reservados.</p>
+          <div className="flex items-center gap-4">
+            <Link href={PRIVACY_PATH} className="hover:text-slate-600 underline" prefetch={false}>
+              Política de Privacidade
+            </Link>
+            <CookiePreferencesButton className="hover:text-slate-600 underline" />
+          </div>
         </div>
       </div>
     </footer>
