@@ -10,6 +10,7 @@ import { Qualifications } from '@/components/Qualifications';
 import { Services } from '@/components/Services';
 import { Species } from '@/components/Species';
 import { StructuredData } from '@/components/StructuredData';
+import { WhatsAppFloat } from '@/components/WhatsAppFloat';
 
 export default function HomePage() {
   return (
@@ -27,6 +28,7 @@ export default function HomePage() {
         <Contact />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 }
